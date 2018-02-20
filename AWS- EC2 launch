@@ -21,4 +21,4 @@ cd /var/www/html
 
 ls
 
-nano index.html
+nano index.html 
