@@ -1,0 +1,7 @@
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+aws s3 cp s3://mywebsitebucket-acloudguru/index.html /var/www/html
+
+//--region is required in some cases; since we have selected N.virginia for this, not required

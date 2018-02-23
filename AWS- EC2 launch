@@ -22,3 +22,15 @@ cd /var/www/html
 ls
 
 nano index.html 
+
+
+#This example launches a single instance of type t2.micro into the specified subnet.
+#The key pair named MyKeyPair and the security group sg-903004f8 must exist.
+aws ec2 run-instances --image-id ami-abc12345 --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-903004f8 --subnet-id subnet-6e7f829e
+
+//get the ami - using describe --instances, copy image_id
+
+
+//filter on describe-images
+aws ec2 describe-images --image-ids ami-5731123e
+aws ec2 describe-images --owners amazon --filters "Name=platform,Values=windows" "Name=root-device-type,Values=ebs"
